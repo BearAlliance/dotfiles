@@ -1,5 +1,11 @@
 [alias]
 
+	co = checkout
+
+	st = status
+
+	am = amend
+
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
@@ -95,17 +101,9 @@
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-	# Make `git rebase` safer on macOS
-	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-	trustctime = false
-
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
-
-	# Speed up commands involving untracked files such as `git status`.
-	# https://git-scm.com/docs/git-update-index#_untracked_cache
-	untrackedCache = true
 
 [color]
 
@@ -113,29 +111,29 @@
 	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
 	ui = auto
 
-[color "branch"]
+# [color "branch"]
 
-	current = yellow reverse
-	local = yellow
-	remote = green
+# 	current = yellow reverse
+# 	local = yellow
+# 	remote = green
 
-[color "diff"]
+# [color "diff"]
 
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
+# 	meta = yellow bold
+# 	frag = magenta bold # line info
+# 	old = red # deletions
+# 	new = green # additions
 
-[color "status"]
+# [color "status"]
 
-	added = yellow
-	changed = green
-	untracked = cyan
+# 	added = yellow
+# 	changed = green
+# 	untracked = cyan
 
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	# gpgsign = true
 
 [diff]
 
@@ -160,7 +158,7 @@
 [push]
 
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
-	default = simple
+	default = current
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
